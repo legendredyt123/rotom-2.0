@@ -4,7 +4,7 @@
 Hexa Pokedex 2.0 is a Telegram Bot that provides all informations about Pokémon. It's accessible through this link <b><i>[Hexa Pokedex 2.0](http://t.me/Pokedexhexabot)</i></b> or writing <b>@Pokedexhexabot</b> on Telegram search bar
 
 ## Deploy to Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Techno212/Hexa Pokedex 2.0.git)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Techno212/inhumanDexbot.git)
 
 ## How it works?
 The bot has 6 main commands:
