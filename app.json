@@ -4,7 +4,7 @@
     "keywords": [
       "Hexa Pokedex 2.0"
     ],
-    "repository": "https://github.com/Techno212/Hexa Pokedex 2.0",
+    "repository": "https://github.com/Techno212/inhumanDexbot",
     "env": {
       "BOT_TOKEN": {
         "description": "Put your bot token."
