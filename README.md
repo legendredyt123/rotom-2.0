@@ -1,7 +1,7 @@
 ![Logo](assets/logo.png)
 
-## What is Rotomgram?
-Rotomgram is a Telegram Bot that provides all informations about Pokémon. It's accessible through this link https://t.me/RotomgramBot or writing @RotomgramBot on Telegram search bar
+## What is Hexa Pokedex 2.0?
+Hexa Pokedex 2.0 is a Telegram Bot that provides all informations about Pokémon. It's accessible through this link http://t.me/Pokedexhexabot or writing @Pokedexhexabot on Telegram search bar
 
 ## Deploy to Heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
@@ -34,4 +34,4 @@ APIs have not been used to build this bot. So, some thanks are due:
 * Smogon (smogon.com) for VGC usage
 
 ## Support
-If you need me, you can contact me sending me an e-mail at alessiocelentano2003@gmail.com or sending a message on Telegram at https://t.me/alessiocelentano (@alessiocelentano on the app)
+If you need me, you can contact me sending me a message on Telegram at https://t.me/Alpha_402 (@Alpha_402 on the app)
