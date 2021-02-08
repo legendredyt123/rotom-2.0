@@ -1,10 +1,10 @@
 {
-    "name": "InhumanDex",
-    "description": "InhumanDex is a bot which acts as a helper for trainers on Telegram. You can check information of Pokemon, Showdown usage and organize Raids as quickly as possible, without ever leaving the app",
+    "name": "Hexa Pokedex 2.0",
+    "description": "Hexa Pokedex 2.0 is a bot which acts as a helper for trainers on Telegram. You can check information of Pokemon, Showdown usage and organize Raids as quickly as possible, without ever leaving the app",
     "keywords": [
-      "InhumanDex"
+      "Hexa Pokedex 2.0"
     ],
-    "repository": "https://github.com/anilchauhanxda/inhumanDexBot",
+    "repository": "https://github.com/Techno212/Hexa Pokedex 2.0",
     "env": {
       "BOT_TOKEN": {
         "description": "Put your bot token."
@@ -17,7 +17,7 @@
       },
       "SUDO": {
         "description": "Put here list of id's -  (not usernames) for users.",
-        "value": "1313665327, 239508098"
+        "value": "1097093376"
       }
     },
     "addons": [],
