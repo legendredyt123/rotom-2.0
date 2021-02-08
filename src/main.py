@@ -531,43 +531,6 @@ def about(app, message):
     )
 
 
-# ===== Raid commands =====
-@app.on_message(Filters.command(['addcode', 'addcode@Pokedexhexabot']))
-def call_add_fc(app, message):
-    raid.add_fc(app, message, texts)
-
-@app.on_message(Filters.command(['mycode', 'mycode@Pokedexhexabot']))
-def call_show_my_fc(app, message):
-    raid.show_my_fc(app, message, texts)
-
-@app.on_message(Filters.command(['newraid', 'newraid@Pokedexhexabot']))
-def call_new_raid(app, message):
-    raid.new_raid(app, message, texts)
-
-@app.on_callback_query(Filters.create(lambda _, query: 'stars' in query.data))
-def call_stars(app, message):
-    raid.stars(app, message, texts)
-
-@app.on_callback_query(Filters.create(lambda _, query: 'join' in query.data))
-def call_join(app, message):
-    raid.join(app, message, texts)
-
-@app.on_callback_query(Filters.create(lambda _, query: 'done' in query.data))
-def call_done(app, message):
-    raid.done(app, message, texts)
-
-@app.on_callback_query(Filters.create(lambda _, query: 'yes' in query.data))
-def call_confirm(app, message):
-    raid.confirm(app, message, texts)
-
-@app.on_callback_query(Filters.create(lambda _, query: 'no' in query.data))
-def call_back(app, message):
-    raid.back(app, message, texts)
-
-@app.on_callback_query(Filters.create(lambda _, query: 'pin' in query.data))
-def call_pin(app, message):
-    raid.pin(app, message, texts)
-
 
 # ===== Presentation =====
 @app.on_message(Filters.create(lambda _, message: message.new_chat_members))
