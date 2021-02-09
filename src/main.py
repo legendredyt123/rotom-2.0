@@ -14,7 +14,7 @@ app = Client(
     api_id=Config.aid,
     api_hash=Config.ahash,
     bot_token=Config.bot_token,
-    session_name='Hexa-Pokedex-2.0'
+    session_name='rotom-2.0'
 )
 
 texts = json.load(open('src/texts.json', 'r'))
@@ -77,7 +77,7 @@ def get_stats(app, message):
 
 
 # ===== Home =====
-@app.on_message(Filters.command(['start', 'start@Pokedexhexa2.0']))
+@app.on_message(Filters.command(['start', 'start@Pokedexhexabot']))
 def start(app, message):
     app.send_message(
         chat_id=message.chat.id,
@@ -93,7 +93,7 @@ def ptype(app, message):
     except IndexError as s:
         app.send_message(
             chat_id=message.chat.id,
-            text="`Syntex error: use eg '/type poison'`"
+            text="`Syntex error: use eg '/type fairy'`"
         )
         return
     try:
@@ -101,7 +101,7 @@ def ptype(app, message):
     except KeyError as s:
         app.send_message(
             chat_id=message.chat.id,
-            text=("`Sir , This type doesn't exists 😑 :/ `\n"
+            text=("`Eeeh, LoL, This type doesn't exists :/ `\n"
                   "`Do  /types  to check for the existing types.`")
         )
         return
@@ -122,7 +122,7 @@ def ptype(app, message):
            
     )
 
-# ==== Typew List =====
+# ==== Types List =====
 def ptype_buttons(user_id):
     keyboard = ([[
         InlineKeyboardButton('Normal',callback_data=f"type_normal_{user_id}"),
@@ -225,7 +225,7 @@ def poketypes(app, message):
         app.send_message(
             chat_id=message.chat.id,
             text=("`Syntex error: use eg '/ptype pokemon_name'`\n"
-                  "`eg /ptype Pikachu`")
+                  "`eg /ptype Lunala`")
         )
         return  
     try:
@@ -233,7 +233,7 @@ def poketypes(app, message):
     except KeyError:
         app.send_message(
             chat_id=message.chat.id,
-            text="`Sir , This pokemon doesn't exits! 😅 :/`"
+            text="`Eeeh, LoL, This pokemon doesn't exists :/`"
         )
         return
     
@@ -250,7 +250,7 @@ def poketypes(app, message):
         chat_id=message.chat.id,
         text=(f"Pokemon: `{arg}`\n\n"
               f"Types: `{get_pt}`\n\n"
-              "__Click the button below to get the attact type effectiveness!__"),
+              "__Click the button below to get the pokemon's type's/types' effectiveness and weakness!__"),
         reply_markup=InlineKeyboardMarkup(keyboard)
     )
     
@@ -278,7 +278,7 @@ def poketypes_callback(client: app, callback_query: CallbackQuery):
         )
     else:
         callback_query.answer(
-            text="You're not allow to use this!",
+            text="You're not allowed to use this!",
             show_alert=True
         )
     
@@ -301,12 +301,12 @@ def poketypes_back(client: app, callback_query: CallbackQuery):
         callback_query.message.edit_text(
             (f"Pokemon: `{query_data}`\n\n"
              f"Types: `{get_pt}`\n\n"
-             "__Click the button below to get the attact type effectiveness!__"),
+             "__Click the button below to get the pokemon's type's/types' effectiveness and weakness!__"),
             reply_markup=InlineKeyboardMarkup(keyboard)
         )
     else:
         callback_query.answer(
-            text="You're not allow to use this!",
+            text="You're not allowed to use this!",
             show_alert=True
         )
     
@@ -479,7 +479,7 @@ def usage(app, message):
         dictt = func.get_usage_vgc(int(page), usage_dict['vgc'])
     except AttributeError:
         page = 1
-        text = '<i>Connecting to Pokémon Showdown database...</i>'
+        text = '<i>Yeah, wi8!.. Connecting to Pokémon Showdown database...</i>'
         message = app.send_message(message.chat.id, text, parse_mode='HTML')
         dictt = func.get_usage_vgc(int(page))
         usage_dict['vgc'] = dictt['vgc_usage']
@@ -519,7 +519,7 @@ def about(app, message):
     markup = InlineKeyboardMarkup([[
         InlineKeyboardButton(
             text='Github',
-            url='https://github.com/Techno212/inhumanDexbot'
+            url='https://github.com/madboy482/rotom-2.0'
         )
     ]])
 
@@ -531,12 +531,11 @@ def about(app, message):
     )
 
 
-
 # ===== Presentation =====
 @app.on_message(Filters.create(lambda _, message: message.new_chat_members))
 def bot_added(app, message):
     for new_member in message.new_chat_members:
-        if new_member.id == 1689531050:
+        if new_member.id == 1480152521:
             text = texts['added']
             app.send_message(
                 chat_id=message.chat.id,
@@ -545,3 +544,4 @@ def bot_added(app, message):
 
 
 app.run()
+
